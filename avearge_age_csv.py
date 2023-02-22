@@ -11,11 +11,11 @@ data_from_file = list(read_File)
 length = len(data_from_file)
 sum = 0
 for eachRow in data_from_file[1:]:
-    age = float(eachRow[4])
-    #try:
-        #age = int(age)
-    #except:
-        #print("Error. Invalid age Type: ", age)
+    age = eachRow[4]
+    try:
+        age = float(age)
+    except:
+        print("Error. Invalid age Type: ", age)
 
     print(age)
     sum  += sum + age
