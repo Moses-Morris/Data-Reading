@@ -9,7 +9,7 @@ data_from_file = list(read_File)
 #print(len(data_from_file))
 
 length = len(data_from_file)
-sum = 0
+total = 0
 for eachRow in data_from_file[1:]:
     age = eachRow[4]
     try:
@@ -18,8 +18,9 @@ for eachRow in data_from_file[1:]:
         print("Error. Invalid age Type: ", age)
 
     print(age)
-    sum  += sum + age
+    total  +=  age
 
-average = sum / length
+print("The total age is : ", total)
+average = total / length
 print("The average age is : ", average)
 open_File.close()
